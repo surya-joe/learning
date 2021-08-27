@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple menu</title>
+    <style>
+        .container{
+            background:#2d9;
+        }
+        .plus{
+            font-style: 30px;
+            background-color: #fff;
+            width:40px;
+            height:40px;
+            border-radius:50%;
+            text-align:center;
+            cursor:pointer;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            margin-bottom:10px;
+        }
+        .menu{
+            background-color: #fff;
+            padding:10px;
+            width:150px;
+            clip-path:circle(20px at 30px 30px);
+            transition:all 0.3s ease-in-out;
+        }
+        .menu.open{
+            clip-path:circle(200px at 20px 20px)
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="plus" onclick="openMenu()"> + </div>
+            <ul>
+                <li>Menu</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function openMenu(){
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('open')
+        }
+    </script>
+</body>
+</html>
