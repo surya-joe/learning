@@ -1,0 +1,22 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:sans-serif;
+}
+body{
+    background-color: #002a3f;
+    min-height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[type='file']{
+    display:none
+}
+label{
+    background:#f5af09;
+    color:#fff;
+    font-size: larger;
+    padding:20px 50px;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- styleSheet -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="../../../assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="../../../assets/fontawesome-free-5.15.3-web/css/all.css">
+    <title>Side Navbar</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logoContent">
+            <div class="logo">
+                <i class="fab fa-facebook"></i>
+                <div class="logoName">Facebook</div>
+            </div>
+            <i id="menuBtn" class="fas fa-bars"></i>
+        </div>
+        <ul class="navList">
+            <!-- link 1 -->
+            <li>
+                <i id="searchBox" class="fas fa-search"></i>
+                <input type="text" placeholder="Search...">
+                <span class="tooltip">Search</span>
+            </li>
+            <!-- link 2 -->
+            <li>
+                <a href="#">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span class="linkName">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <!-- link 3 -->
+            <li>
+                <a href="#">
+                    <i class="fas fa-user"></i>
+                    <span class="linkName">User</span>
+                </a>
+                <span class="tooltip">User</span>
+            </li>
+            <!-- link 4 -->
+            <li>
+                <a href="#">
+                    <i class="fas fa-comment-alt"></i>
+                    <span class="linkName">Message</span>
+                </a>
+                <span class="tooltip">Message</span>
+            </li>
+            <!-- link 5 -->
+            <li>
+                <a href="#">
+                    <i class="fas fa-chart-pie"></i>
+                    <span class="linkName">Analytics</span>
+                </a>
+                <span class="tooltip">Analytics</span>
+            </li>
+            <!-- link 6 -->
+            <li>
+                <a href="#">
+                    <i class="fas fa-folder"></i>
+                    <span class="linkName">File Manager</span>
+                </a>
+                <span class="tooltip">File Manager</span>
+            </li>
+            <!-- link 7 -->
+            <li>
+                <a href="#">
+                    <i class="fas fa-cart-plus"></i>
+                    <span class="linkName">Order</span>
+                </a>
+                <span class="tooltip">Order</span>
+            </li>
+            <!-- link 8 -->
+            <li>
+                <a href="#">
+                    <i class="fas fa-heart"></i>
+                    <span class="linkName">Saved</span>
+                </a>
+                <span class="tooltip">Saved</span>
+            </li>
+            <!-- link 9 -->
+            <li>
+                <a href="#">
+                    <i class="fas fa-cog"></i>
+                    <span class="linkName">Setting</span>
+                </a>
+                <span class="tooltip">Setting</span>
+            </li>
+        </ul>
+
+        <div class="profileContent">
+            <div class="profile">
+                <div class="profileDetails">
+                    <img src="../../../assets/images/veronica.jpg" alt="">
+                    <div class="jobName">
+                        <div class="name">Veronica scarllet</div>
+                        <div class="job">Creative Head</div>
+                    </div>
+                </div>
+                <i id='logOut' class="fas fa-sign-out-alt"></i>
+            </div>
+        </div>
+    </div>
+    <div class="homeContent">
+        <div class="homeTitle">Home Content</div>
+    </div>
+    <!-- js -->
+    <script src="./script.js"></script>
+</body>
+</html>

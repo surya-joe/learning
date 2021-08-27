@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:sans-serif;
+        }
+        body{
+            min-height:100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #2ec194;
+        }
+        .container{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .container .box{
+            position:relative;
+            width:300px;
+            height:200px;
+            margin:40px 0;
+            background-color: #fff;
+            color:rgba(0,0,0,0.3);
+            font-size:2.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container .b1{
+            box-shadow: -30px 30px 20px rgba(0,0,0,0.3);
+        }
+        .container .b2:before{
+            content:'';
+            position:absolute;
+            bottom:10px;
+            left:10%;
+            width: 90%;
+            height:50px;
+            background:rgba(0,0,0,0.3);
+            transform-origin:left;
+            transform:skewY(5deg);
+            z-index: -1;
+            filter:blur(5px)
+        }
+        .container .b3:before{
+            content:'';
+            position:absolute;
+            left:0;
+            bottom:0;
+            width: 50%;
+            height:30px;
+            background-color: rgba(0,0,0,0.3);
+            transform-origin:right;
+            transform:skewY(-8deg);
+            z-index: -1;
+            filter:blur(10px)            
+        }
+        .container .b3:after{
+            content:'';
+            position:absolute;
+            right:0;
+            bottom:0;
+            width: 50%;
+            height:30px;
+            background-color: rgba(0,0,0,0.3);
+            transform-origin:left;
+            transform:skewY(8deg);
+            z-index: -1;
+            filter:blur(10px)            
+        }
+
+        .container .b4:before{
+            content: '';
+            position:absolute;
+            bottom: -50px;
+            left:5%;
+            width:90%;
+            height:20px;
+            background-color: rgba(0,0,0,0.3);
+            border-radius:50%;
+            z-index: -1;
+            filter:blur(10px);
+        }
+        .container .b5:before{
+            content:'';
+            position:absolute;
+            bottom: -15%;
+            left: 5%;
+            width:90%;
+            height:90%;
+            background-color: rgba(0,0,0,0.3);
+            z-index:-1;
+            filter:blur(10px)
+        }
+        .container .b6{
+            background-color: #2ec194;
+            border-radius:15px;
+            box-shadow: -15px -15px 15px rgba(255,255,255,0.2),
+                        15px 15px 15px rgba(0,0,0,0.1);
+        }
+        .container .b7{
+            background:#2ec194;
+            border-radius: 15px;
+            box-shadow:-15px -15px 15px rgba(255,255,255,0.2),
+                        15px 15px 15px rgba(0,0,0,0.1),
+                        inset -5px -5px 5px rgba(255,255,255,0.2),
+                        inset 5px 5px 5px rgba(0,0,0,0.1)
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box b1">box-1</div>
+        <div class="box b2">box-2</div>
+        <div class="box b3">box-3</div>
+        <div class="box b4">box-4</div>
+        <div class="box b5">box-5</div>
+        <div class="box b6">box-6</div>
+        <div class="box b7">box-7</div>
+    </div>
+</body>
+</html>
